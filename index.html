@@ -131,6 +131,69 @@
         </div>
     </section>
 
+    <!-- Arquitetura & Ergonomia de Desenvolvimento (Onde o nosso debate se encaixa) -->
+    <section class="py-20 bg-[#060606] border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-purple-400 font-semibold mb-3 block">Engenharia de Ponta</span>
+                <h3 class="text-3xl font-bold text-white mb-4">O Padrão de Abstração em Duas Camadas (Dual-Layer)</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Esqueça o acoplamento de infraestrutura. O DNEA separa cirurgicamente o motor técnico bruto da ergonomia de negócio, entregando contratos limpos, imutáveis e nativos para .NET 10.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <!-- Caixa 1: O Problema Tradicional -->
+                <div class="bg-[#0c0c0c] border border-white/10 p-8 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-8 h-8 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 text-sm font-bold">✕</span>
+                            <h4 class="text-lg font-semibold text-white">Desenvolvimento Tradicional</h4>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-400 mb-6">
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-400 mt-0.5">•</span> Códigos poluídos com métodos de controlo manual de conexões (<code class="text-xs bg-black/50 px-1.5 py-0.5 rounded text-gray-300">Close()</code>, <code class="text-xs bg-black/50 px-1.5 py-0.5 rounded text-gray-300">Ping()</code>).
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-400 mt-0.5">•</span> Mistura perigosa entre detalhes de drivers de infraestrutura e regras de domínio.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-400 mt-0.5">•</span> Dificuldade extrema para trocar de fornecedor (vendor lock-in de cache ou mensageria).
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-4 rounded-xl bg-red-950/20 border border-red-500/20 font-mono text-xs text-red-300">
+                        // Alto acoplamento e boilerplate repetitivo em cada módulo
+                    </div>
+                </div>
+
+                <!-- Caixa 2: A Solução DNEA (Onde o nosso elogio brilha) -->
+                <div class="bg-gradient-to-br from-purple-950/30 via-[#0c0c0c] to-[#0c0c0c] border border-purple-500/40 p-8 rounded-2xl flex flex-col justify-between glow-effect">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-8 h-8 rounded-lg bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-400 text-sm font-bold">✓</span>
+                            <h4 class="text-lg font-semibold text-white">Abordagem DNEA (Enterprise-Grade)</h4>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-300 mb-6">
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-400 mt-0.5">✓</span> <strong>Dual-Layer Abstraction:</strong> Separação absoluta entre contratos de infraestrutura pura e o core de negócio.
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-400 mt-0.5">✓</span> <strong>Ciclo de Vida Nativizado:</strong> Gestão de conexões entregue ao DI container do .NET (<code class="text-xs bg-black/50 px-1.5 py-0.5 rounded text-purple-300">IAsyncDisposable</code>).
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-400 mt-0.5">✓</span> <strong>Ergonomia Superior:</strong> DTOs imutáveis (<code class="text-xs bg-black/50 px-1.5 py-0.5 rounded text-purple-300">records</code>) e suporte a <code class="text-xs bg-black/50 px-1.5 py-0.5 rounded text-purple-300">CancellationToken</code> em tudo.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-4 rounded-xl bg-purple-950/40 border border-purple-500/30 font-mono text-xs text-purple-300">
+                        // Zero friction. Foco exclusivo nas regras de negócio da sua empresa.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Infraestrutura / Módulos Prontos -->
     <section id="infra" class="py-24 border-t border-white/10">
         <div class="max-w-6xl mx-auto px-6">
