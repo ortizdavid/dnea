@@ -20,6 +20,18 @@ O **DNEA** não é apenas mais um boilerplate básico de ASP.NET Core. É um **M
 
 ---
 
+## ⚡ Simplicidade, Produtividade e Código Limpo (Sem Exageros)
+
+> *"Menos complexidade acidental, mais código de negócio entregue a produzir valor."*
+
+Muitos projetos falham ou atrasam porque caem na armadilha da **complexidade prematura** (over-engineering). O DNEA foi construído com uma premissa clara: **ser incrivelmente simples de usar, fácil de escalar e direto ao ponto.**
+
+* **Zero Boilerplate Desnecessário:** Esqueça escrever a mesma camada de infraestrutura dezenas de vezes. A arquitetura limpa aqui é aplicada sem dogmas exagerados, focada estritamente na produtividade do dia a dia.
+* **Curva de Aprendizagem Acelerada:** Qualquer programador .NET sênior ou pleno entende a estrutura em minutos e consegue começar a criar regras de negócio no mesmo dia.
+* **A Importância de Ter Tudo Pronto:** Num cenário comercial onde o *Time-to-Market* dita quem sobrevive, perder 3 meses a montar infraestrutura básica é deitar dinheiro fora. Com o DNEA, você clona, ajusta as variáveis e já tem um monólito modular pronto para escalar em produção.
+
+---
+
 ## 🧱 Infraestrutura Desacoplada & Módulos Prontos
 
 O DNEA foi desenhado sob o princípio de **Plug & Play**. Cada componente de infraestrutura está isolado em seu próprio ponto/módulo, permitindo que você adicione, troque ou remova dependências sem afetar o núcleo do negócio:
@@ -50,7 +62,7 @@ O verdadeiro custo de um software empresarial não está no código inicial, mas
 
 ## 💎 O que está incluído na Licença Comercial?
 
-Ao adquirir a licença, você recebe:
+Ao adquirir a licença por **$249.00**, você recebe:
 * **Full Source Code Access:** Acesso vitalício ao repositório privado contendo todo o chassis arquitetural e os módulos de infraestrutura em .NET.
 * **Módulos de Infra & Docker Prontos:** Mensageria, Cache, Storage, Observabilidade, Multi-Tenant e imagens otimizadas implementadas com as melhores práticas.
 * **API Gateway & Discovery Nativo:** Roteamento inteligente com suporte a negociação de conteúdo.
