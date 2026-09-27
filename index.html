@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNEA — DotNetEnterpriseAccelerator | .NET 10 Modular Monolith</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #f3f4f6; }
+        code, pre { font-family: 'Fira Code', monospace; }
+        .glow-effect {
+            box-shadow: 0 0 50px -10px rgba(124, 58, 237, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-[#050505] text-gray-100 antialiased selection:bg-purple-500 selection:text-white">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#050505]/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-purple-500 inline-block animate-pulse"></span>
+                    DNEA<span class="text-purple-400">.</span>
+                </span>
+                <span class="text-xs uppercase px-2.5 py-0.5 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-300 font-medium hidden sm:inline-block">.NET 10 Modular</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-400">
+                <a href="#arquitetura" class="hover:text-white transition-colors">Arquitetura</a>
+                <a href="#infra" class="hover:text-white transition-colors">Infraestrutura</a>
+                <a href="#beneficios" class="hover:text-white transition-colors">Vantagens</a>
+                <a href="#preco" class="hover:text-white transition-colors">Licença</a>
+            </nav>
+            <div>
+                <a href="#preco" class="bg-purple-600 hover:bg-purple-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-purple-600/20">
+                    Garantir Licença
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-36 pb-20 md:pt-44 md:pb-32 px-6 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-purple-600/10 blur-[120px] pointer-events-none rounded-full"></div>
+        
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-purple-300 mb-6">
+                <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Chassis de Engenharia para Sistemas .NET de Alta Performance
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                Construa Monólitos Modulares <br class="hidden sm:inline">
+                <span class="bg-gradient-to-r from-purple-400 via-indigo-300 to-white bg-clip-text text-transparent">Sem Complexidade Acidental.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Esqueça semanas de setup inicial. O <strong>DotNetEnterpriseAccelerator (DNEA)</strong> entrega arquitetura limpa, dockerização otimizada e módulos de infraestrutura prontos para produção em .NET 10.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#preco" class="w-full sm:w-auto bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-xl shadow-purple-600/25 text-center">
+                    Adquirir Acesso Vitalício ($249)
+                </a>
+                <a href="#infra" class="w-full sm:w-auto bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium px-8 py-4 rounded-xl transition-all text-center">
+                    Explorar Infraestrutura
+                </a>
+            </div>
+
+            <!-- Terminal Mockup preview -->
+            <div class="mt-16 max-w-3xl mx-auto bg-[#0a0a0a] border border-white/10 rounded-xl overflow-hidden text-left glow-effect">
+                <div class="bg-[#121212] px-4 py-3 border-b border-white/10 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                    </div>
+                    <span class="text-xs text-gray-500 font-mono">bash — dnea setup</span>
+                </div>
+                <div class="p-6 font-mono text-sm text-gray-300 space-y-2">
+                    <p class="text-purple-400">$ make up</p>
+                    <p class="text-gray-500"># Subindo infraestrutura isolada (PostgreSQL, Redis, RabbitMQ, Grafana)...</p>
+                    <p class="text-emerald-400">✔ Containers iniciados com sucesso em 1.4s</p>
+                    <p class="text-purple-400">$ dotnet run --project src/Dnea.Api</p>
+                    <p class="text-emerald-400">✔ Application running on http://localhost:5000 (Modular Engine Active)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simplicidade & Produtividade Section -->
+    <section id="arquitetura" class="py-20 border-t border-white/10 bg-[#080808]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-xs uppercase tracking-widest text-purple-400 font-semibold mb-3">Filosofia de Projeto</h2>
+                    <h3 class="text-3xl font-bold text-white mb-6">Menos complexidade acidental. Mais valor de negócio.</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Muitos projetos falham antes de nascer porque perdem meses configurando camadas repetitivas. O DNEA foi desenhado para engenheiros que valorizam o pragmatismo: arquitetura limpa aplicada sem dogmas exagerados, focada estritamente na produtividade do dia a dia.
+                    </p>
+                    <ul class="space-y-4 text-gray-300 text-sm">
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs font-bold">✓</span>
+                            Curva de aprendizagem rápida para devs Plenos e Sêniors.
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs font-bold">✓</span>
+                            Fronteiras de domínio rígidas preparadas para microsserviços futuros.
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs font-bold">✓</span>
+                            Economize meses de desenvolvimento de fundação técnica.
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-[#101010] border border-white/10 p-8 rounded-2xl relative">
+                    <div class="absolute -top-3 -right-3 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">Pronto para Produção</div>
+                    <h4 class="text-xl font-semibold text-white mb-4">A Importância de Ter Tudo Pronto</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        No mercado atual, o <em>Time-to-Market</em> dita quem sobrevive. Ter autenticação, mensageria, cache, observabilidade e containerização perfeitamente integrados desde o primeiro commit elimina o atrito técnico que atrasa entregas críticas.
+                    </p>
+                    <div class="p-4 rounded-xl bg-black/40 border border-white/5 font-mono text-xs text-purple-300">
+                        // Clone -> Configure -> Code Business Rules
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infraestrutura / Módulos Prontos -->
+    <section id="infra" class="py-24 border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest text-purple-400 font-semibold mb-3">Plug & Play Architecture</h2>
+                <h3 class="text-3xl font-bold text-white mb-4">Infraestrutura Desacoplada e Completa</h3>
+                <p class="text-gray-400">Cada componente isolado em seu próprio módulo. Adicione ou remova dependências sem tocar no núcleo da aplicação.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-[#0c0c0c] border border-white/10 p-6 rounded-xl hover:border-purple-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-bold mb-4">🐳</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Docker Otimizado</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Multi-stage builds enxutos, seguros e prontos para máxima performance em produção.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-[#0c0c0c] border border-white/10 p-6 rounded-xl hover:border-purple-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-bold mb-4">📬</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Mensageria & Outbox</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Abstração para RabbitMQ/MassTransit com garantia de entrega via Transactional Outbox.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-[#0c0c0c] border border-white/10 p-6 rounded-xl hover:border-purple-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-bold mb-4">⚡</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Cache Distribuído</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Redis integrado com padrões de invalidação e decorators eficientes para repositórios.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-[#0c0c0c] border border-white/10 p-6 rounded-xl hover:border-purple-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-bold mb-4">📊</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Observabilidade Real</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Stack pronta com OpenTelemetry, Prometheus, Grafana e Loki para tracing e logs.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-[#0c0c0c] border border-white/10 p-6 rounded-xl hover:border-purple-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-bold mb-4">🏢</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Multi-Tenant Nativo</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Isolamento completo de dados e tenants por schema ou identificador na base de dados.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-[#0c0c0c] border border-white/10 p-6 rounded-xl hover:border-purple-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-bold mb-4">🤖</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Makefile Inteligente</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Comandos unificados para setup local, migrações, testes e seeds em segundos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Licenciamento -->
+    <section id="preco" class="py-24 border-t border-white/10 bg-[#080808]">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-xs uppercase tracking-widest text-purple-400 font-semibold mb-3">Investimento Único</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">Pronto para acelerar suas entregas em .NET?</h3>
+            <p class="text-gray-400 max-w-xl mx-auto mb-12">Adquira acesso vitalício ao repositório privado e a todo o chassis corporativo do DNEA.</p>
+
+            <div class="bg-[#0c0c0c] border border-purple-500/30 rounded-2xl p-8 md:p-12 glow-effect relative max-w-lg mx-auto text-left">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">
+                    Acesso Vitalício
+                </div>
+
+                <div class="flex items-baseline justify-between mb-8 pb-8 border-b border-white/10">
+                    <div>
+                        <h4 class="text-2xl font-bold text-white">DNEA Commercial</h4>
+                        <p class="text-sm text-gray-400">Licença para equipe / desenvolvedor</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-4xl font-extrabold text-white">$249</span>
+                        <span class="text-xs text-gray-400 block">USD / pagamento único</span>
+                    </div>
+                </div>
+
+                <ul class="space-y-4 text-sm text-gray-300 mb-8">
+                    <li class="flex items-center gap-3">
+                        <span class="text-purple-400 font-bold">✓</span> Acesso vitalício ao repositório privado
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-purple-400 font-bold">✓</span> Módulos de Infra & Docker Otimizado inclusos
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-purple-400 font-bold">✓</span> API Gateway & Discovery com Content Negotiation
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-purple-400 font-bold">✓</span> Manuais de arquitetura e guias operacionais
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-purple-400 font-bold">✓</span> Suporte técnico direto via canal privado
+                    </li>
+                </ul>
+
+                <a href="https://wa.me/244936166699?text=Olá%20David,%20tenho%20interesse%20na%20licença%20do%20DotNetEnterpriseAccelerator" target="_blank" class="block w-full bg-purple-600 hover:bg-purple-500 text-white font-semibold py-4 rounded-xl text-center transition-all shadow-lg shadow-purple-600/25">
+                    Garantir Licença via WhatsApp
+                </a>
+                <p class="text-center text-xs text-gray-500 mt-4">Inclusão no repositório privado em menos de 24h após confirmação.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10 text-center text-sm text-gray-500">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 DotNetEnterpriseAccelerator (DNEA). Todos os direitos reservados.</p>
+            <p class="text-gray-400">Desenvolvido com rigor por <span class="text-white font-medium">Ortiz David</span>.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
