@@ -62,7 +62,7 @@ O verdadeiro custo de um software empresarial não está no código inicial, mas
 
 ## 💎 O que está incluído na Licença Comercial?
 
-Ao adquirir a licença por **$249.00**, você recebe:
+Ao adquirir a licença, você recebe:
 * **Full Source Code Access:** Acesso vitalício ao repositório privado contendo todo o chassis arquitetural e os módulos de infraestrutura em .NET.
 * **Módulos de Infra & Docker Prontos:** Mensageria, Cache, Storage, Observabilidade, Multi-Tenant e imagens otimizadas implementadas com as melhores práticas.
 * **API Gateway & Discovery Nativo:** Roteamento inteligente com suporte a negociação de conteúdo.
